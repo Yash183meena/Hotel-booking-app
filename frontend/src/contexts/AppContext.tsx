@@ -28,7 +28,7 @@ export const AppContextProvider=({children}:{children:React.ReactNode})=>{
       const {isError}=useQuery("validationToken",apiClient.validateToken,{
             retry:false,
       });
-
+       
       return(
             <AppContext.Provider value={{showToast:(toastmessage)=>{
                   setToast(toastmessage);

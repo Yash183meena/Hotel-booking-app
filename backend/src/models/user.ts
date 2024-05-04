@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
-//ye UserType TypeScript me banaye jaate hai jo ki jankarii(information/structure of model) ko batata hai take hame pata chal sake ki har use object me kon kon se properties hai
+//ye UserType TypeScript me banaye jaate hai jo ki jankarii(information/structure of model) ko batata hai take hame pata chal sake ki har user object me kon kon se properties hai
 
 //ye sirf Typescript me hote hai javascript me nahi hote
 export type UserType={

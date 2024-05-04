@@ -15,7 +15,7 @@ test('should allow the user to sign in', async ({ page }) => {
 
    //to locate the fields in that page
    await page.locator("[name=email]").fill("dd@gmail.com");
-   await page.locator("[name=password]").fill("123456");
+   await page.locator("[name=password]").fill("123456"); 
 
    await page.getByRole("button",{name:"Login"}).click();
    await expect(page.getByText("Sign in successful!")).toBeVisible();

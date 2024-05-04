@@ -1,6 +1,7 @@
 import { NextFunction,Request,Response } from "express";
 import jwt,{JwtPayload} from 'jsonwebtoken';
 
+// "In an Express.js application, I want to add a userId property to the Request object, so that I can easily access the ID of the user making the request throughout my application."
 declare global{
       namespace Express{
             interface Request{

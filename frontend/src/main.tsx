@@ -4,7 +4,7 @@ import App from './App.tsx'
 import './index.css'
 import {QueryClient, QueryClientProvider} from "react-query";
 import { AppContextProvider } from './contexts/AppContext.tsx';
-
+import { SearchContextProvider } from './contexts/SearchContext.tsx';
 //for connecting our react-queery. wrap our app in the QueryClientProvider
 
 const queryclient=new QueryClient({
@@ -20,7 +20,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     {/* in this always pass an props cliet */}
     <QueryClientProvider client={queryclient}>
         <AppContextProvider>
-             <App />
+             <SearchContextProvider>
+                <App/>
+             </SearchContextProvider>
         </AppContextProvider>
     </QueryClientProvider>
   </React.StrictMode>,
