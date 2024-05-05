@@ -16,7 +16,9 @@ test.beforeEach(async({page})=>{
 
       await page.getByRole("button",{name:"Login"}).click();
 
-      setTimeout(async()=>await expect(page.getByText("Sign in successful!")).toBeVisible(),5000)
+      setTimeout(async()=>{
+      await expect(page.getByText("Sign in successful!")).toBeVisible();
+      },5000)
       
 });
 
@@ -27,7 +29,9 @@ test("should show hotel search results",async({page})=>{
       await page.getByRole("button",{name:"Search"}).click();
 
       await expect(page.getByText("Hotels found in jaipur")).toBeVisible();
-    setTimeout(async()=>{await expect(page.getByText("Rambagh Palace")).toBeVisible()},5000);
+     setTimeout(async()=>{
+      await expect(page.getByText("Rambagh Palace")).toBeVisible();
+     },5000);
 
 })
 

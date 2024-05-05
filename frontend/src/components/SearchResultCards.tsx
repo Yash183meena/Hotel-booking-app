@@ -22,9 +22,9 @@ const SearchResultCards = ({hotel}:props) => {
                                     <AiFillStar className='fill-yellow-400'/>
                               ))}
                         </span>
-                        <Link to={`/details/${hotel._id}`} className="ml-1 text-sm">{hotel.type}</Link>
+                        <span className="ml-1 text-sm">{hotel.type}</span>
                   </div>
-                  <h2 className="text-2-xl font-bold cursor-pointer">{hotel.name}</h2>
+                  <Link to={`/details/${hotel._id}`} className="text-2-xl font-bold cursor-pointer">{hotel.name}</Link>
             </div>
             <div>
             <div className="line-clamp-4">
