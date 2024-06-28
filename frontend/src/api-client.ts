@@ -10,6 +10,9 @@ export const register = async (formData: RegisterFromData) => {
         credentials:"include",
       //   In JavaScript, specifically in the context of making fetch requests, the credentials option is used to specify whether to include cookies, HTTP authentication,
         headers: {
+
+          //application/json means the response data coming in the form of json
+          //Content Type is the ttpe of content eg json,string etc
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),

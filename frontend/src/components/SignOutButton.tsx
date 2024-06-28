@@ -14,12 +14,13 @@ const SignOutButton = () => {
             onSuccess:async ()=>{
                 //1)show toast
                 //2)navigate
-                //querclient.invalidateQueries is to refetching the data and without refresh our page to rerendered our valitionToken
+                //querclient.invalidateQueries is to refetching the data and without refresh our page to rerendered our validationToken
                 
                 //The queryClient.invalidateQueries function is a method provided by the React Query library. It allows you to manually invalidate one or more queries in the cache, triggering their refetching.
                 await queryclient.invalidateQueries("validationToken");
                 showToast({message:"Signed Out!",type:"SUCCESS"})
                 navigate('/');
+                
             },
             onError:(error:Error)=>{
                  //1)showToast

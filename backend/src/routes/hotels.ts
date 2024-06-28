@@ -209,7 +209,7 @@ router.get("/:id",[
 
 const constructSearchQuery = (queryParams: any) => {
   let constructedQuery: any = {};
-
+  // { city: new RegExp(queryParams.destination, "i") } और { country: new RegExp(queryParams.destination, "i") } ये दोनों ऑब्जेक्ट्स हैं जो डेटाबेस में city और country फील्ड्स को queryParams.destination से मैच करने के लिए रेगुलर एक्सप्रेशन का उपयोग करते हैं। "i" ऑप्शन का मतलब है कि मैचिंग केस इनसेंसिटिव है, यानी बड़े और छोटे अक्षरों के बीच अंतर नहीं किया जाएगा।
   if (queryParams.destination) {
     constructedQuery.$or = [
       { city: new RegExp(queryParams.destination, "i") },

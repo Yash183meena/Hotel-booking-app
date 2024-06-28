@@ -74,6 +74,7 @@ const SearchBar = () => {
          </div>
 
          <div>
+            {/* selectsStart--> 1)It helps in linking two date pickers, where one is used for selecting the start date (selectsStart) and the other for selecting the end date (selectsEnd) 2)  responsible for selecting the beginning of a date range.*/}
             <DatePicker 
             selected={checkIn}
             onChange={(date)=>setCheckIn(date as Date)}

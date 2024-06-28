@@ -2,7 +2,7 @@ import { useForm } from 'react-hook-form';
 import { useMutation, useQueryClient } from 'react-query';
 import * as apiClient from '../api-client';
 import { useAppContext } from '../contexts/AppContext';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 export type SignInFormData={
       email:string;
@@ -15,6 +15,8 @@ const SignIn = () => {
       const {showToast}=useAppContext();
       const navigate=useNavigate();
 
+      const location=useLocation();
+
       const {register,formState:{errors},handleSubmit}=useForm<SignInFormData>();
 
 
@@ -26,7 +28,8 @@ const SignIn = () => {
               console.log("user has been signed in");
               showToast({message:"Sign in successful!",type:"SUCCESS"});
               await queryclient.invalidateQueries("validationToken");
-              navigate('/');
+              navigate(location.state?.from?.pathname || '/');
+              //agar kahi par aapka previously location ka state url save hua wa hai tou sign in k baad us pr chale jao exmaple ---> in the guest info page after click on (Sign in for Book)
             },
             onError:(error:Error)=>{
                   //show the toast

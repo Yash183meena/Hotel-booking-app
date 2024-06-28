@@ -32,8 +32,9 @@ const Register = () => {
       onSuccess:async ()=>{
           showToast({message:"Registration Success",type:"SUCCESS"});
           //D drive ke react 10 project me iska explanation hai
+
           await queryclient.invalidateQueries("validationToken");
-          navigate('/');
+          navigate('/'); 
       },
       onError:(error:Error)=>{
             //This error comess from api-client where it throw Error and give message which is (ResponseBody.message) or apiclient ke pass se backend se aa rahi hai

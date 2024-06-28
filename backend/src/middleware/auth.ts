@@ -12,7 +12,7 @@ declare global{
 
 const verifyToken=(req:Request,res:Response,next:NextFunction)=>{
       
-      //this is the request object(property) in the  express.js where we can access the property of the object. In req.cookie we will access the cookie sent by the client in the HYYP server
+      //this is the request object(property) in the  express.js where we can access the property of the object. In req.cookie we will access the cookie sent by the client in the HTTP server
       const token=req.cookies["auth_token"];
 
       //checking token it is exist or not

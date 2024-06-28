@@ -33,6 +33,26 @@ test("should show hotel search results",async({page})=>{
       await expect(page.getByText("Rambagh Palace")).toBeVisible();
      },5000);
 
+});
+
+test("should show hotel detail",async({page})=>{
+      await page.goto(UI_URL);
+
+      await page.getByPlaceholder("Where are you going?").fill("Dublin");
+      await page.getByRole("button", { name: "Search" }).click();
+    
+      setTimeout(async()=>{
+            await expect(page.getByText("Rambagh Palace")).toBeVisible();
+           },5000);
+
+           setTimeout(async()=>{
+            await expect(page).toHaveURL(/detail/);
+           },5000);
+      
+      
+      setTimeout(async()=>{
+            await expect(page.getByRole("button", { name: "Book now" })).toBeVisible();
+           },5000);
 })
 
 

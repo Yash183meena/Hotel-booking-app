@@ -10,6 +10,7 @@ import {v2 as cloudinary} from "cloudinary";
 import myhotelRoutes from "./routes/my-hotels"
 import hotelRoutes from "./routes/hotels";
 
+//yaha pr cloud_name,api_key,api_secret ko in hi naam se rkhna hai koi aur nahi use krna kyuki cloudniary ke configuration objet me ye naam hi use hote hai
 cloudinary.config({
       cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
       api_key: process.env.CLOUDINARY_API_KEY,

@@ -62,7 +62,9 @@ const Details = () => {
             <div className="h-fit">
                   <GuestInfoForm 
                   pricePerNight={hotel.pricePerNight}
-                  hotelId={hotel._id}/>
+                  hotelId={hotel._id}
+                  
+                  />
             </div>
         </div>
       </div>
