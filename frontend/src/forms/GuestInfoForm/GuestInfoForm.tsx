@@ -49,7 +49,7 @@ const GuestInfoForm = ({hotelId,pricePerNight}:Props) => {
                   data.adultCount,
                   data.childCount
                  );
-
+            //  state:{from:location} se apn apne navigation se phele ki location specify kr dete hai taake jaha pr navigate hua hai waha se wapas navigate karke is page par aa jaye
             navigate("/sign-in",{state:{from:location}})     
       };
 
@@ -62,7 +62,7 @@ const GuestInfoForm = ({hotelId,pricePerNight}:Props) => {
                   data.childCount
                  );
 
-            navigate(`/hotel/${hotelId}/booking`);     
+            navigate(`/details/${hotelId}`);     
       };
 
   return (
