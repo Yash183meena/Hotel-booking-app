@@ -12,10 +12,10 @@ export type UserType={
 }
 
 const userSchema=new mongoose.Schema({
-    email:{type:String,require:true,unique:true,},
-    password:{type:String,require:true},
-    firstname:{type:String,require:true},
-    lastname:{type:String,require:true}
+    email:{type:String,required:true,unique:true,},
+    password:{type:String,required:true},
+    firstName:{type:String,required:true},
+    lastName:{type:String,required:true}
 });
 
 
@@ -30,3 +30,4 @@ userSchema.pre("save", async function (next) {
 const User=mongoose.model<UserType>("User",userSchema);
 
 export default User;
+

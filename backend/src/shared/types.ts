@@ -24,3 +24,11 @@ export type HotelType={
             pages:number;
       }
  }
+
+ export type UserType={
+      _id:string,
+      password:string,
+      firstname:string,
+      lastname:string,
+      email:string,
+}

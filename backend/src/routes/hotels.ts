@@ -236,7 +236,7 @@ const constructSearchQuery = (queryParams: any) => {
         : [queryParams.facilities],
     };
   }
-
+   //$in operator mongodb ka operator hai ye check karta hai ki allowing MongoDB to find documents where the type field matches any of the specified values.(check karta hai ki jo values chaiya queryParams.types me wo)
   if (queryParams.types) {
     constructedQuery.type = {
       $in: Array.isArray(queryParams.types)
