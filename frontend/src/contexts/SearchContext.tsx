@@ -64,8 +64,8 @@ export const SearchContextProvider=({children}:SearchContextProviderProps)=>{
             setDestination(destination);
             setCheckIn(checkIn);
             setCheckOut(checkOut);
-            setAdultCount(adultCount);
             setChildCount(childCount);
+            setAdultCount(adultCount);
             if(hotelId){
                   setHotelId(hotelId);
             }
@@ -75,8 +75,8 @@ export const SearchContextProvider=({children}:SearchContextProviderProps)=>{
             sessionStorage.setItem("destination",destination);
             sessionStorage.setItem("checkIn",checkIn.toISOString());
             sessionStorage.setItem("checkOut",checkOut.toISOString());
-            sessionStorage.setItem("adultCount",adultCount.toString());
             sessionStorage.setItem("childCount",childCount.toString());
+            sessionStorage.setItem("adultCount",adultCount.toString());
 
             if(hotelId){
                   sessionStorage.setItem("hotelId",hotelId);
